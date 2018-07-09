@@ -1,0 +1,237 @@
+$icon-size:55px;
+$dark-overlay: rgba(0,0,0, 0.7);
+$color-facebook:#1a538a;
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+// button
+.btn-facebook{
+  background-color: $color-facebook;
+}
+
+body{
+  overflow-x:hidden;
+}
+.navbar{
+  .nav-link{
+    font-size:14px;
+    text-transform:uppercase;
+    padding-left:1em !important;
+    padding-right: 1em !important;
+  }
+
+  .nav-item.active{
+    border-left:#444 3px solid;
+  }
+}
+
+#showcase .bg-video{
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+#content h1{
+position: absolute;
+ top:20%;
+ left: 15%;
+  color: #f1f1f1;
+  width: 100%;
+  font-size: 5em;
+  padding: 20px;
+}
+#content p{
+  position: absolute;
+ top:35%;
+ left: 19%;
+  color: #f1f1f1;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+@media (max-width: 768px) { 
+  #content h1{
+    font-size: 2em;
+  }
+
+  #content p{
+    font-size: 1em;
+  }
+}
+
+#home-icons img{
+  opacity: 0.9;
+}
+
+
+.dark-overlay{
+  position:absolute;
+  background-color:$dark-overlay;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#video-play{
+  position:relative;
+  min-height:200px;
+  background:url('../img/media.jpg');
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-position:0 -300px;
+  text-align:center;
+  color:#fff;
+  a{
+    color:#fff;
+  }
+
+  .fa{
+    font-size: $icon-size;
+  }
+}
+
+footer#main-footer{
+  background:#000;
+  color:#fff;
+}
+
+#page-header{
+  height:200px;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../img/media.jpg');
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+
+#about{
+  img{
+    margin-top:-50px;
+  }
+}
+
+#faq{
+  .card{
+    border:#444;
+    a{
+      color:#fff;
+      text-decoration:none;
+    }
+  }
+
+  .card-body, .card-header{
+    background:#333;
+  }
+}
+
+//Carousel Product Cart Slider
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
+}
+.col-item .photo img
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
+}
+
+.col-item:hover .info {
+    background-color: #F5F5DC;
+}
+.col-item .price
+{
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
+}
+
+.col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
+}
+
+.price-text-color
+{
+    color: #219FD1;
+}
+
+.col-item .info .rating
+{
+    color: #777;
+}
+
+.col-item .rating
+{
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+.col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+.clear-left
+{
+    clear: left;
+}
+
+.col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-item .separator p i
+{
+    margin-right: 5px;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+
+.col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+}
+
+.col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.controls
+{
+    margin-top: 20px;
+}
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}

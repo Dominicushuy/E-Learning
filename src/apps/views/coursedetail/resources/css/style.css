@@ -1,0 +1,286 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; 
+}
+body {
+    overflow-x: hidden;
+}
+
+/* phần nav bar*/
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1em !important;
+  padding-right: 1em !important; }
+.navbar .nav-item.active {
+  border-left: #444 3px solid; }
+
+.btn-facebook {
+  background-color: #1a538a; 
+}
+
+/*phần carousel*/
+#showcase .bg-video {
+  position: relative;
+  width: 100%;
+  opacity: 1; }
+
+#showcase #content h1 {
+  position: absolute;
+  top: 40%;
+  left: 18.5%;
+  color: rgba(255, 255, 255, 0.808);
+  width: 100%;
+  font-size: 5em;
+  padding: 20px; }
+
+  #showcase #content input[type="search"]{
+  position: absolute;
+  top: 60%;
+  left: 20.5%;
+  width: 50%;
+  }
+
+  
+  #showcase #content div{
+    position: absolute;
+    top: 65%;
+    left: 20.5%;
+    width: 50%;
+    height:200px;
+    overflow:hidden; overflow-y:auto;
+    }
+
+@media (max-width: 768px) {
+  #showcase #content h1 {
+    font-size: 2em; }
+
+  }
+
+  /*phần mục tiệu*/
+
+
+
+/*danh mục khóa học*/
+
+#info .container {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+
+
+#info .thumbnail:hover .overlay {
+  transform: scale(1);
+}
+
+#info .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.322);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform:scale(0);
+  transition: .3s ease;
+}
+
+#info .text {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#info .btn-1{
+  top: 70%;
+  left: 30%;
+  position: absolute;
+}
+
+#info .btn-2{
+  top: 62%;
+  left: 40%;
+  position: absolute;
+}
+#info .btn-3{
+  top: 70%;
+  left: 32%;
+  position: absolute;
+}
+#info .btn-4{
+  top: 70%;
+  left: 32%;
+  position: absolute;
+}
+#info .btn-5{
+  top: 70%;
+  left: 32%;
+  position: absolute;
+}
+#info .btn-6{
+  top: 70%;
+  left: 32%;
+  position: absolute;
+}
+#info .btn-7{
+  top: 70%;
+  left: 32%;
+  position: absolute;
+}
+
+
+/*phần video play*/
+#video-play {
+  position: relative;
+  min-height: 200px;
+  background: url("../img/media.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0 -300px;
+  text-align: center;
+  color: #fff; }
+  #video-play a {
+    color: #fff; }
+  #video-play .fa {
+    font-size: 55px; }
+
+    #video-play .dark-overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+
+
+
+/*các khóa học phổ biến*/
+.col-item {
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  background: #FFF; }
+
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%; }
+
+.col-item .info {
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  margin-top: 1px; }
+
+.col-item:hover .info {
+  background-color: #F5F5DC; }
+
+.col-item .price {
+  /*width: 50%;*/
+  float: left;
+  margin-top: 5px; }
+
+.col-item .price h5 {
+  line-height: 20px;
+  margin: 0; }
+
+.price-text-color {
+  color: #219FD1; }
+
+.col-item .info .rating {
+  color: #777; }
+
+.col-item .rating {
+  /*width: 50%;*/
+  float: left;
+  font-size: 17px;
+  text-align: right;
+  line-height: 52px;
+  margin-bottom: 10px;
+  height: 52px; }
+
+
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+/*AUTHOR*/
+#authors img {
+  margin-top: -50px; }
+
+#authors .fa {
+  font-size: 25px; }
+
+#authors .card:hover {
+  background: #3292a6;
+  color: #fff; }
+  #authors .card:hover .fa {
+    color: #fff; }
+
+/*phần footer*/
+
+footer#main-footer {
+  background: #000;
+  color: #fff; }
+
+/**Scroll to TOP */
+
+
+/** QUay 180 độ phần rotate */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 180px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+  /* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  background-color: rgba(0, 0, 0, 0.185);
+	transform: rotateY(180deg);
+}
+
+
