@@ -14,12 +14,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round" type="text/css">
 
-  <!--     Sweet Alert     -->
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <link rel="stylesheet" href="resources/css/font-awesome.min.css">
   <link rel="stylesheet" href="resources/css/bootstrap.css">
   <link rel="stylesheet" href="resources/css/style_coursedetail.css">
+  <link rel="stylesheet" href="../signin/css/sweetalert2.min.css">
+
   <link rel="stylesheet" href="resources/css/slick-theme.css">
   <link rel="stylesheet" href="resources/css/slick.css">
 </head>
@@ -36,18 +36,18 @@
       <div class="collapse navbar-collapse" id="nav-content">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item ">
-            <a href="" class="nav-link">Trang chủ</a>
+            <a href="../home/index.html" class="nav-link">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">Khóa học</a>
+            <a href="../MyCourse/index.html" class="nav-link">Khóa học</a>
           </li>
 
-          <li class="nav-item active">
-            <a class="btn nav-link" data-toggle="modal" href="" id="TenChuTK">
+          <li>
+            <a class="btn nav-link" href="../user/examples/user.html" id="TenTK2">
               <i class="fa fa-sign-in"></i> Đăng nhập</a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link" id="btnThoat">
+            <a href="../home/index.html" class="nav-link" id="btnLogOut">
               <i class="fa fa-sign-out"></i> Logout
             </a>
           </li>
@@ -61,8 +61,8 @@
       <div class="row">
 
         <div class="col-md-6 mt-3">
-          <h2 id="tenkhoahoc1">Tên Khóa Học</h2>
-          <p id="luotxem1">Lượt xem: </p>
+          <h2 id="TenKhoaHoc1">Tên Khóa Học</h2>
+          <p id="LuotXem">Lượt xem: </p>
           <a href="" class="btn btn-danger btn-lg mt-3">Bắt đầu học</a>
           <div class="rating hidden-sm mt-3">
             <i class="price-text-color fa fa-star"></i>
@@ -81,7 +81,8 @@
           </div>
         </div>
 
-        <div class="col-md-6 img_banner">
+        <div class="col-md-6 ">
+          <img src="resources/img/img14.jpg" class="img-fluid" id="img_banner">
         </div>
       </div>
     </div>
@@ -274,15 +275,15 @@
 
         <div class="col-lg-4" id="fix-card">
           <div class="card" style="width:400px">
-            <img class="card-img-top" src="resources/img/img2.jpg" alt="Card image" id="hinhanh2">
+            <img class="card-img-top" src="resources/img/img2.jpg" alt="Card image" id="img_card">
             <div class="card-body">
-              <h4 class="card-title" id="tenkhoahoc2">Tên khóa học</h4>
-              <p class="card-text" id="nguoitao1">Người dạy</p>
+              <h4 class="card-title" id="TenKhoaHoc2">Tên khóa học</h4>
+              <p class="card-text" id="NguoiTao">Người dạy</p>
               <a href="#" class="btn btn-success btn-block btnMoTa btn-lg" data-video="" data-toggle="modal" data-target="#videoModal">
-                <i class="fa fa-play"> Giới thiệu về khóa học</i>
+               <i class="fa fa-info">Giới thiệu khóa học</i>
               </a>
 
-              <a href="#" class="btn btn-danger btn-block mt-3" id="ghidanh">Ghi danh khóa học</a>
+              <a href="#" class="btn btn-danger btn-block mt-3" id="btnGhiDanh"><i class="fa fa-plus"></i>Ghi danh khóa học</a>
             </div>
           </div>
         </div>
@@ -295,7 +296,7 @@
                 <button class="close" data-dismiss="modal">
                   <span>&times;</span>
                 </button>
-                <div id="mota1">
+                <div id="MoTa">
                 </div>
               </div>
             </div>
@@ -320,8 +321,16 @@
   <script src="resources/js/jquery.min.js"></script>
   <script src="resources/js/popper.min.js"></script>
   <script src="resources/js/bootstrap.min.js"></script>
+  <script src="../signin/js/sweetalert2.all.min.js"></script>
   <script src="resources/js/slick.js"></script>
-  <script src="resources/js/main.js"></script>
+
+  <script src="../../controllers/TaiKhoan/Validation.js"></script>
+  <script src="../../services/TaiKhoan/DangKyService.js"></script>
+  <script src="../../services/TaiKhoan/DangNhapService.js"></script>
+  <script src="../../services/TaiKhoan/ThongTinService.js"></script>
+  <script src="../../services/TaiKhoan/KhoaHocService.js"></script>
+  <script src="../../services/TaiKhoan/GhiDanhService.js"></script>
+  <script src="../../controllers/TaiKhoan/main.js"></script>
 
 </body>
 

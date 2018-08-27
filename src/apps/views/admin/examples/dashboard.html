@@ -18,7 +18,7 @@
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body>
   <div class="wrapper ">
     <div class="sidebar" data-color="orange" data-background-color="orange" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo">
@@ -35,31 +35,31 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="./user.html" id="ThongTinAmin">
               <i class="material-icons">person</i>
               <p>Thông tin tài khoản</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./DanhSachNguoiDung.html">
+            <a class="nav-link" href="./DanhSachNguoiDung.html" id="DanhSachNguoiDung">
               <i class="material-icons">content_paste</i>
               <p>Danh sách người dùng</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./DanhSachKhoaHoc.html">
+            <a class="nav-link" href="./DanhSachKhoaHoc.html" id="DanhSachKhoaHoc">
               <i class="material-icons">library_books</i>
               <p>Danh sách khóa học</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+            <a class="nav-link" href="./DanhSachHocVien.html" id="DanhSachHocVien">
               <i class="material-icons">list</i>
               <p>Danh sách học viên</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" id="LogOutAmin">
               <i class="material-icons">close</i>
               <p>Đăng Xuất</p>
             </a>
@@ -104,12 +104,12 @@
                     <i class="material-icons">content_paste</i>
                   </div>
                   <p class="card-category">Người Dùng</p>
-                  <h3 class="card-title">69</h3>
+                  <h3 class="card-title" id="SLNguoiDung">69</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons">local_offer</i>
-                    <a href="#pablo">Xem Chi Tiết</a>
+                    <a href="DanhSachNguoiDung.html">Xem Chi Tiết</a>
                   </div>
                 </div>
               </div>
@@ -121,12 +121,12 @@
                     <i class="material-icons">library_books</i>
                   </div>
                   <p class="card-category">Khóa Học</p>
-                  <h3 class="card-title">96</h3>
+                  <h3 class="card-title" id="SLKhoaHoc">96</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons">local_offer</i>
-                    <a href="#pablo">Xem Chi Tiết</a>
+                    <a href="DanhSachKhoaHoc.html">Xem Chi Tiết</a>
                   </div>
                 </div>
               </div>
@@ -138,33 +138,23 @@
                     <i class="material-icons">list</i>
                   </div>
                   <p class="card-category">Học Viên</p>
-                  <h3 class="card-title">99</h3>
+                  <h3 class="card-title" id="SLHocVien">99</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons">local_offer</i>
-                    <a href="#pablo">Xem Chi Tiết</a>
+                    <a href="DanhSachHocVien.html">Xem Chi Tiết</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
-              
-            </div>
-            <div class="col-md-4">
-              
-            </div>
-            <div class="col-md-4">
-             
-          </div>
-          <div class="row">
             <div class="col-lg-6 col-md-12">
-              
+               <div id="bieudocot" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             </div>
             <div class="col-lg-6 col-md-12">
-             
+               <div id="bieudotron" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
             </div>
           </div>
         </div>
@@ -195,6 +185,21 @@
   <script src="../assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  
+  <script src="../../../controllers/TaiKhoan/main_dashboard.js"></script>
+
+
+<!-- Hight Chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<script src="../../../controllers/TaiKhoan/bieudocot.js"></script>
+<script src="../../../controllers/TaiKhoan/bieudotron.js"></script>
+
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js

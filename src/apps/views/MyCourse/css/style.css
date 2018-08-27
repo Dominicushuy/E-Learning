@@ -18,7 +18,7 @@ body a{
 .header{
 	background: linear-gradient(60deg, #4a0000, #ffa800);
 	padding-left: 20px;
-	padding: 10px;
+	/* padding: 10px; */
 	/* margin-left: 16em; */
 }
 .header-left{
@@ -47,6 +47,7 @@ body a{
 	display:inline-block;
 	margin-right: 60px;
 	color: white;
+	cursor: pointer;
 }
 .menu li:first-child{
    	margin-left:0;
@@ -237,17 +238,17 @@ body a{
 #loginContainer {
     position:relative;
     /* background: #F4792C; */
-    padding: 30px 10px 20px 50px;
+    padding: 25px 10px 20px 50px;
 }
 #loginContainer a span{
-   padding:0px 0px 0 5px;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 0.85em;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 0.85em;
+   margin-bottom: 25px;
 }
 /* Login Button */
-#loginButton { 
-    display:inline-block;  
+#loginButton {
+    display:inline-block;
     position:relative;
     z-index:30;
     cursor:pointer;

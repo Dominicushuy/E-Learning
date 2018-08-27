@@ -16,6 +16,7 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../signin/css/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body class="">
@@ -28,38 +29,38 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item ">
             <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="./user.html">
+          <li class="nav-item active">
+            <a class="nav-link" href="./user.html" id="ThongTinAmin">
               <i class="material-icons">person</i>
               <p>Thông tin tài khoản</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./DanhSachNguoiDung.html">
+            <a class="nav-link" href="./DanhSachNguoiDung.html" id="DanhSachNguoiDung">
               <i class="material-icons">content_paste</i>
               <p>Danh sách người dùng</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./DanhSachKhoaHoc.html">
+            <a class="nav-link" href="./DanhSachKhoaHoc.html" id="DanhSachKhoaHoc">
               <i class="material-icons">library_books</i>
               <p>Danh sách khóa học</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./DanhSachHocVien.html">
+          <li class="nav-item ">
+            <a class="nav-link" href="./DanhSachHocVien.html" id="DanhSachHocVien">
               <i class="material-icons">list</i>
               <p>Danh sách học viên</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" id="LogOutAmin">
               <i class="material-icons">close</i>
               <p>Đăng Xuất</p>
             </a>
@@ -108,7 +109,15 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Tài Khoản:</label>
-                          <input type="text" class="form-control" disabled value="Dominicushuy">
+                          <input type="text" class="form-control" disabled value="" id="TKAmin">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Mật Khẩu</label>
+                          <input type="text" class="form-control" value="" id="MKAmin">
                         </div>
                       </div>
                     </div>
@@ -116,7 +125,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Họ Tên</label>
-                          <input type="text" class="form-control" value="Nguyễn Lê Gia Huy">
+                          <input type="text" class="form-control" value="" id="NameAmin">
                         </div>
                       </div>
                     </div>
@@ -124,7 +133,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email</label>
-                          <input type="text" class="form-control" value="huypro1996z@gmail.com">
+                          <input type="text" class="form-control" value="" id="EmailAmin">
                         </div>
                       </div>
                     </div>
@@ -132,12 +141,12 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Số điện thoại</label>
-                          <input type="text" class="form-control" value="0933903874">
+                          <input type="text" class="form-control" value="" id="SoDTAmin">
                         </div>
                       </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary pull-right">Cập Nhật</button>
+                    <a class="btn btn-primary pull-right" id="btnCapNhatTTAmin">Cập Nhật</a>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -152,7 +161,7 @@
                 </div>
                 <div class="card-body">
                   <h6 class="card-category text-gray">ADMIN</h6>
-                  <h4 class="card-title">DominicusHuy</h4>
+                  <h4 class="card-title" id="NameAmin2">DominicusHuy</h4>
                   <a href="#pablo" class="btn btn-primary btn-round">Thay đổi ảnh</a>
                 </div>
               </div>
@@ -184,8 +193,16 @@
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+
+  <script src="../../signin/js/sweetalert2.all.min.js"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  
+  <script src="../../../controllers/TaiKhoan/Validation.js"></script>
+  <script src="../../../models/NguoiDung/NguoiDung.js"></script>
+  <script src="../../../models/NguoiDung/DanhSachNguoiDung.js"></script>
+  <script src="../../../services/NguoiDung/NguoiDungServices.js"></script>
+  <script src="../../../controllers/NguoiDung/main_admin.js"></script>
 </body>
 
 </html>

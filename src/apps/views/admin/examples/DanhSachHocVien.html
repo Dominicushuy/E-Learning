@@ -21,46 +21,45 @@
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="orange" data-background-color="orange" data-image="../assets/img/sidebar-1.jpg">
-    
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-         QUẢN LÝ TRUNG TÂM
+        <a href="#" class="simple-text logo-normal">
+          QUẢN LÝ TRUNG TÂM
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item ">
             <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="./user.html" id="ThongTinAmin">
               <i class="material-icons">person</i>
               <p>Thông tin tài khoản</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./DanhSachNguoiDung.html">
+            <a class="nav-link" href="./DanhSachNguoiDung.html" id="DanhSachNguoiDung">
               <i class="material-icons">content_paste</i>
               <p>Danh sách người dùng</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./DanhSachKhoaHoc.html">
+            <a class="nav-link" href="./DanhSachKhoaHoc.html" id="DanhSachKhoaHoc">
               <i class="material-icons">library_books</i>
               <p>Danh sách khóa học</p>
             </a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="./DanhSachHocVien.html">
+          <li class="nav-item active">
+            <a class="nav-link" href="./DanhSachHocVien.html" id="DanhSachHocVien">
               <i class="material-icons">list</i>
               <p>Danh sách học viên</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" id="LogOutAmin">
               <i class="material-icons">close</i>
               <p>Đăng Xuất</p>
             </a>
@@ -81,8 +80,8 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+              <div class="input-group no-border" >
+                <input type="text" value="" class="form-control" placeholder="Search..." id="txtTimKiem">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
@@ -97,13 +96,15 @@
                     Some Actions
                   </p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">5</a>
-                  <a class="dropdown-item" href="#">10</a>
-                  <a class="dropdown-item" href="#">20</a>
-                  <a class="dropdown-item" href="#">50</a>
-                  <a class="dropdown-item" href="#">Hiện tất cả</a>
-                </div>
+              </li>
+              <li>
+                <select aria-labelledby="navbarDropdownMenuLink" id="Rows">
+                  <option value="500000">Hiện tất cả</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                </select>
               </li>
             </ul>
           </div>
@@ -121,20 +122,24 @@
                 <div class="col-md-12">
                   <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="Table">
                       <thead class="">
                         <th></th>
-                        <th>ID</th>
                         <th>Tài Khoản</th>
                         <th>Họ Tên</th>
                         <th>Email</th>
                         <th>Số điện thoại</th>
                         <th>Mã loại người dùng</th>
                       </thead>
-                      <tbody>
+                      <tbody id="tbodyDSHV">
 
                       </tbody>
                     </table>
+                    <div class="pagination-container">
+                        <nav>
+                            <ul class="pagination"></ul>
+                        </nav>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -172,6 +177,15 @@
   <script src="../assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script src="../../../../assets/js/jquery.twbsPagination.min.js"></script>
+
+
+  <script src="../../../models/HocVien/HocVienKhoaHoc.js"></script>
+  <script src="../../../models/HocVien/DanhSachHocVien.js"></script>
+  <script src="../../../services/HocVien/HocVienService.js"></script>
+  <script src="../../../models/NguoiDung/DanhSachNguoiDung.js"></script>
+  <script src="../../../controllers/HocVien/main_hocvien.js"></script>
+  <script src="../../../controllers/HocVien/PhanTrang.js"></script>
 </body>
 
 </html>

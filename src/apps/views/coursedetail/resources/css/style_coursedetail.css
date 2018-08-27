@@ -17,19 +17,15 @@ body {
   }
 
 #page-header img {
-  width: 70%;
-  padding-top: 20px; }
+  width: 370px;
+  height: 280px;
+  padding-top: 20px;
+  }
 
  iframe{
    height: 450px;
    width: 100%;
  }
-.img_banner{
-  background: url('../img/img2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
 a.btn.btn-danger.btn-lg.mt-3 {
     background: #F9A019;
@@ -45,6 +41,9 @@ a.nav-link {
     color: white;
 }
 
+a.nav-link:hover {
+    color: #510601;
+}
 .progress-bar.bg-white {
     background: #f16600 !important;
 }
@@ -157,5 +156,13 @@ margin-left: 50px;
 .post .post-footer .comments-list .comment > .comments-list {
 margin-left: 50px;
 }
+a#ghidanh {
+    background: #EE9718;
+    border: none;
+}
 
+a.btn.btn-success.btn-block.btnMoTa.btn-lg {
+    background: #500601;
+    border: none;
+}
 
